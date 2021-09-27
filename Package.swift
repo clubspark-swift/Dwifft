@@ -1,14 +1,19 @@
+
+// swift-tools-version:5.2
 import PackageDescription
 
 let package = Package(
     name: "Dwifft",
-    dependencies : [],
-    exclude: [
-        "Carthage",
-        "DwifftTests",
-        "DwifftExample",
-        "docs",
-        "Dwifft.xcworkspace",
-        "scripts",
+    
+    products: [
+        .library(name: "Dwifft", targets: ["Dwifft"])
+    ],
+    
+    targets: [
+        .target(
+            name: "Dwifft",
+            path: "./Dwifft"
+        )
     ]
 )
+
